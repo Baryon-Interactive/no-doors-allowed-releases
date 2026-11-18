@@ -20,6 +20,15 @@ version with the developer key, and replace the three release assets. The
 catalogue picks the change up within about 15 minutes. See the
 [publishing guide](https://github.com/Baryon-Interactive/vesper/blob/main/docs/publishing.md).
 
-Builds are hosted at `https://packs.vesperplay.xyz/{release}/{pack_id}`:
+Builds are GitHub Releases of this repository (`v<version>-windows`,
+`v<version>-web`), mirrored to R2 at
+`https://cdn.vesperplay.xyz/no-doors-allowed/{release}/{pack_id}` for browsers.
 `stable` is the Windows build and `stable-web-wasm32` is the browser build.
-The signing key is never stored here.
+Publish from this directory, with the R2 settings in `vesper.toml` and the
+credentials in `VESPER_R2_ACCESS_KEY_ID` and `VESPER_R2_SECRET_ACCESS_KEY`:
+
+```bash
+vesper publish <build> --owner Baryon-Interactive --repo no-doors-allowed-releases --tag <tag> --metadata-dir ./metadata --channel <channel>
+```
+
+The signing key and R2 credentials are never stored here.

@@ -1,0 +1,9 @@
+app_id = "no-doors-allowed"
+
+# Mirror every build to R2 (bucket baryon-builds, served at cdn.vesperplay.xyz).
+# Credentials come from VESPER_R2_ACCESS_KEY_ID and VESPER_R2_SECRET_ACCESS_KEY.
+[r2]
+bucket = "baryon-builds"
+account_id = "fa9d62341a9d273c8f287a4f8dcad34a"
+prefix = "no-doors-allowed"
+public_base = "https://cdn.vesperplay.xyz/no-doors-allowed"
